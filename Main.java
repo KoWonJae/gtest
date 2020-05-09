@@ -1,23 +1,28 @@
 package OssExma09;
 
 public class Main {
-	public static double fact(int n) {
-	if(n<=1) {
-		return n;
-	}			
-	else {
-		return fact(n-1)*n;
-	}		
-	}
-	public static void lam() {
-		double a = 0;
-		
-		for(int i = 1; i <= 100; i++) {
-			a += (fact(4*i)*(1103 + 26390*i)/(Math.pow(fact(i),4)*Math.pow(396,4*i)));
+	public static void john() {
+		double f = 1;
+		double num = 1;
+		double num2 = 2;
+		double num3 = 2;
+		double num4 = 3;
+		for(int i = 0; i <= 10000000; i++) {
+			if(i%2 == 0) {
+				f = f*(num/num2);
+				num = num +2;
+				num2 = num2 + 2;
+			} else {
+				f = f*(num4/num3);
+				num3 = num3 +2;
+				num4 = num4 + 2;
+			}
+			
 		}
-		System.out.println("라마누잔 공식");
-		System.out.println("원주율 :" + 1/(a*2/9801));
+		System.out.println("월리스 곱셈 공식");
+		System.out.println("원주율 :" + (2/f));
 	}
+	
 	public static void main(String[] args) {
 		double m = 1;
 		double num = 0;
@@ -27,7 +32,7 @@ public class Main {
 		}
 		System.out.println("라이프니츠 급수");
 		System.out.println("원주율 :" + (4 * num));
-		lam();
+		john();
 	}
 
 }
